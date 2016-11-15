@@ -41,11 +41,23 @@ pip install geopandas
 ```
 **Windows Note:** Some users encounter difficulties installing `GDAL` and `shapely` using `conda` on Windows. An alternative is to use the copies of these (and a few other) Python packages, maintained by Christoph Gohlke at [http://www.lfd.uci.edu/~gohlke/pythonlibs/](http://www.lfd.uci.edu/~gohlke/pythonlibs/). You would need to download the following packages from that site:
 
-* GDAL (currently 2.1.2)
-* shapely
+* `GDAL` (currently 2.1.2)
+* `shapely`
+* `fiona` (dependency of `geopandas` and other packages)
+* `rasterio` (dependency of `rasterstats`)
 
+Make sure you download the file appropriate to your version of Python (eg 3.5, 3.6) and the architecture of Windows (`win32` vs `win_amd64`). You will then need to install the downloaded wheel (`.whl` file) using pip. For example:
 
+```
+cd \Users\me\Downloads
+pip install GDAL‑2.1.2‑cp35‑cp35m‑win_amd64.whl
+pip install Shapely‑1.5.17‑cp35‑cp35m‑win_amd64.whl
+pip install Fiona‑1.7.0‑cp35‑cp35m‑win_amd64.whl
+pip install rasterio‑1.0a3‑cp35‑cp35m‑win_amd64.whl
+```
+(Where the exact filenames may differ depending on the version of Python and Windows)
 
+After these commands have run, `pip install geopandas` should work.
 
 Finally, the examples use [python-rasterstats](https://github.com/perrygeo/python-rasterstats) to perform zonal statistics:
 
@@ -58,15 +70,4 @@ Of course, you need to install Lasso as well:
 ```
 pip install https://github.com/flowmatters/lasso/archive/master.zip
 ```
-
-**Once its uploaded**
-
-
-### Notes to self...
-
-```
-pip install git+https://github.com/pacificclimate/pydap.git@develop
-pip install git+https://github.com/Unidata/siphon.git
-```
-
 

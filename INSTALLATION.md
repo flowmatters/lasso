@@ -39,7 +39,7 @@ conda install GDAL shapely
 Finally, the examples use [python-rasterstats](https://github.com/perrygeo/python-rasterstats) to perform zonal statistics:
 
 ```
-pip install rasterstats
+pip install rasterstats geopandas
 ```
 
 Of course, you need to install Lasso as well:

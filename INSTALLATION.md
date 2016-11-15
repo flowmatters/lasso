@@ -55,7 +55,10 @@ pip install Shapely‑1.5.17‑cp35‑cp35m‑win_amd64.whl
 pip install Fiona‑1.7.0‑cp35‑cp35m‑win_amd64.whl
 pip install rasterio‑1.0a3‑cp35‑cp35m‑win_amd64.whl
 ```
+
 (Where the exact filenames may differ depending on the version of Python and Windows)
+
+You will also need the Microsoft Visual C++ 2015 runtime libraries (which these Windows builds of GDAL/Fiona/etc need). Download and install the runtime from [https://www.visualstudio.com/downloads/download-visual-studio-vs#d-visual-c](https://www.visualstudio.com/downloads/download-visual-studio-vs#d-visual-c) (searching for 'Runtime' in the Search Downloads box to find the most recent release for your Windows architecture - 32/64 bit).
 
 After these commands have run, `pip install geopandas` should work.
 

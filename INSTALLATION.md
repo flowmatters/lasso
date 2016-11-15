@@ -28,16 +28,29 @@ A basic installation of Lasso requires [OWSLib](https://geopython.github.io/OWSL
 ```
 pip install https://github.com/pacificclimate/pydap/archive/develop.zip OWSLib https://github.com/Unidata/siphon/archive/master.zip
 ```
+**Windows Note:** If the above command fails, try explicitly installing `pyproj` with `conda` first, before repeating the above `pip install`.
+
+```
+conda install pyproj
+```
 Most (if not all) of the data services you will access through Lasso will return some form of spatial data, in which case Lasso will require [OGR/GDAL](https://pypi.python.org/pypi/GDAL/)  (although we will remove this dependency in the future), [Shapely](https://pypi.python.org/pypi/Shapely) and [GeoPandas](http://geopandas.org/):
 
 ```
 conda install GDAL shapely
+pip install geopandas
 ```
+**Windows Note:** Some users encounter difficulties installing `GDAL` and `shapely` using `conda` on Windows. An alternative is to use the copies of these (and a few other) Python packages, maintained by Christoph Gohlke at [http://www.lfd.uci.edu/~gohlke/pythonlibs/](http://www.lfd.uci.edu/~gohlke/pythonlibs/). You would need to download the following packages from that site:
+
+* GDAL (currently 2.1.2)
+* shapely
+
+
+
 
 Finally, the examples use [python-rasterstats](https://github.com/perrygeo/python-rasterstats) to perform zonal statistics:
 
 ```
-pip install rasterstats geopandas
+pip install rasterstats
 ```
 
 Of course, you need to install Lasso as well:

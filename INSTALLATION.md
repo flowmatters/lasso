@@ -41,7 +41,7 @@ pip install geopandas
 ```
 **Windows Note:** Some users encounter difficulties installing `GDAL` and `shapely` using `conda` on Windows. An alternative is to use the copies of these (and a few other) Python packages, maintained by Christoph Gohlke at [http://www.lfd.uci.edu/~gohlke/pythonlibs/](http://www.lfd.uci.edu/~gohlke/pythonlibs/). You would need to download the following packages from that site:
 
-* `GDAL` (currently 2.1.2)
+* `GDAL` (several versions are available, download the latest version from the 2.0. line -- currently 2.0.3)
 * `shapely`
 * `fiona` (dependency of `geopandas` and other packages)
 * `rasterio` (dependency of `rasterstats`)

@@ -24,12 +24,10 @@ Anaconda Python will install a number of the packages needed by Lasso, such as [
 Other packages can be installed using `pip` (the recommended tool for installing Python packages) or `conda`, the package manager for Anaconda. You run `pip` and `conda` from the command line (Terminal in OSX or Anaconda Command Prompt in Windows). `conda` can also run from the Anaconda Navigator application.
 
 A basic installation of Lasso requires [OWSLib](https://geopython.github.io/OWSLib/), [Siphon](https://github.com/Unidata/siphon) and [Pydap](http://www.pydap.org/):
-ow
 
 ```
-pip install git+https://github.com/pacificclimate/pydap.git@develop OWSLib git+https://github.com/Unidata/siphon.git
+pip install https://github.com/pacificclimate/pydap/archive/develop.zip OWSLib https://github.com/Unidata/siphon/archive/master.zip
 ```
-
 Most (if not all) of the data services you will access through Lasso will return some form of spatial data, in which case Lasso will require [OGR/GDAL](https://pypi.python.org/pypi/GDAL/)  (although we will remove this dependency in the future), [Shapely](https://pypi.python.org/pypi/Shapely) and [GeoPandas](http://geopandas.org/):
 
 ```

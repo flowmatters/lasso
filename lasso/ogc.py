@@ -121,7 +121,12 @@ class WFSResult(OGCEnpointResult):
         from shapely.wkt import loads
 
         for f in features:
-            f.geom = loads(f.geometry().ExportToWkt())
+            geom = f.geometry()
+            try:
+                wkt = geom.ExportToIsoWkt()
+            except:
+                wkt = geom.ExportToIsoWkt()
+            f.geom = loads(wkt)
 
         if dataframe:
             from geopandas import GeoDataFrame

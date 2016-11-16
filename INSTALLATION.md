@@ -44,7 +44,7 @@ pip install geopandas
 * `GDAL` (several versions are available, download the latest version from the 2.0. line -- currently 2.0.3)
 * `shapely`
 * `fiona` (dependency of `geopandas` and other packages)
-* `rasterio` (dependency of `rasterstats`)
+* `rasterio` (dependency of `rasterstats`, currently use the 0.X line -- eg 0.36)
 
 Make sure you download the file appropriate to your version of Python (eg 3.5, 3.6) and the architecture of Windows (`win32` vs `win_amd64`). You will then need to install the downloaded wheel (`.whl` file) using pip. For example:
 

@@ -122,11 +122,11 @@ class WFSResult(OGCEnpointResult):
 
         for f in features:
             geom = f.geometry()
+            wkt = geom.ExportToWkt()
             try:
-                wkt = geom.ExportToIsoWkt()
+                f.geom=loads(wkt)
             except:
-                wkt = geom.ExportToIsoWkt()
-            f.geom = loads(wkt)
+                f.geom=loads(wkt.replace('MULTISURFACE','MULTIPOLYGON'))
 
         if dataframe:
             from geopandas import GeoDataFrame

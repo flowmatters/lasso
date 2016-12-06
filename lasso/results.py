@@ -181,6 +181,9 @@ class URIResult(SearchResult):
         elif protocol=='OGC:WFS':
             from .ogc import WFSResult
             return self._expand([WFSResult(self._res['url'],parent=self)],recursive)
+        elif protocol.upper()=='GEOJSON':
+            from .geojson import GeoJSONResult
+            return self._expand([GeoJSONResult(self._res['url'],parent=self)],recursive)
         return [self]
 
     def describe(self):
